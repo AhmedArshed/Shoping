@@ -1,7 +1,7 @@
 import requests
 import traceback
 from bs4 import BeautifulSoup
-from utils.helper import url_insert_bulk
+from src.utils.helper import url_insert_bulk
 
 def khaadi_url():
     try:
@@ -41,5 +41,3 @@ def khaadi_url():
     except Exception as e:
         message = "Error: " + str(e) + "\n" + traceback.format_exc()
         print(message)
-
-khaadi_url()

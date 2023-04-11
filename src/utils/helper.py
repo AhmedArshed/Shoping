@@ -46,3 +46,28 @@ def url_insert_bulk(data):
         message = "Error: " + str(e) + "\n" + traceback.format_exc()
         print(message)
 
+def get_competitor_urls(competitor, products=[]):
+    try:
+        urls = []
+        mydb_comp_product = db.competitorproducts.find({
+            "competitor": competitor,
+            "$or": [
+                {"their_name": {"$in": products}},
+                {"extracted_names": {"$in": products}}
+            ]
+        }, {"_id": 0, "url": 1})
+        output_list = list(mydb_comp_product)
+        for data in output_list:
+            urls.append(data['url'])
+        return urls
+    except Exception as e:
+        message = "Error: " + str(e) + "\n" + traceback.format_exc()
+        print(message)
+
+def update_logs(id):
+    try:
+        print("update",id)
+    except Exception as e:
+        message = "Error: " + str(e) + "\n" + traceback.format_exc()
+        print(message)
+

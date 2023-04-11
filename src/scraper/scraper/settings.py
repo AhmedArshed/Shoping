@@ -1,4 +1,4 @@
-# Scrapy settings for compitator_scraper project
+# Scrapy settings for scraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'compitator_scraper'
+BOT_NAME = 'scraper'
 
-SPIDER_MODULES = ['compitator_scraper.spiders']
-NEWSPIDER_MODULE = 'compitator_scraper.spiders'
+SPIDER_MODULES = ['scraper.spiders']
+NEWSPIDER_MODULE = 'scraper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'compitator_scraper (+http://www.yourdomain.com)'
+#USER_AGENT = 'scraper (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'compitator_scraper.middlewares.CompitatorScraperSpiderMiddleware': 543,
+#    'scraper.middlewares.ScraperSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'compitator_scraper.middlewares.CompitatorScraperDownloaderMiddleware': 543,
+#    'scraper.middlewares.ScraperDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'compitator_scraper.pipelines.CompitatorScraperPipeline': 300,
+#    'scraper.pipelines.ScraperPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
